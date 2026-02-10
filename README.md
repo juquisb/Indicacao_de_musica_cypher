@@ -1,5 +1,45 @@
+# 🎧 Indicação de Músicas com Neo4j (Cypher)
 
----
+Projeto desenvolvido para estudo e prática de banco de dados orientado a grafos utilizando **Neo4j** e **Cypher**, com foco na construção de uma base para recomendação de músicas baseada em características sonoras e gêneros musicais.
+
+## 📌 Objetivo
+
+Criar um modelo de relacionamento entre músicas, playlists e gêneros musicais para permitir:
+
+- Consulta dos gêneros mais presentes na base
+- Identificação de playlists mais diversas
+- Recomendação de músicas por:
+  - Similaridade sonora
+  - Gênero musical
+
+## 🧠 Conceitos Utilizados
+
+- Banco de dados em grafo
+- Modelagem de relacionamentos
+- Cypher Query Language
+- Similaridade baseada em features musicais
+- Estruturação de dados para recomendação
+
+## 🗂 Estrutura dos Dados
+
+### 🎵 Tracks
+Informações das músicas contendo características como:
+
+- Nome
+- Energia
+- Danceability
+- Valence
+- Tempo (BPM)
+- Duração
+- Gênero
+
+###  Playlists
+Relacionamento entre playlists e músicas.
+
+###  Gêneros
+Classificação musical associada às tracks.
+
+## 🔗 Modelagem do Grafo
 
 ## ⚙️ Tecnologias Utilizadas
 
@@ -9,7 +49,6 @@
 - GitHub
 - Git Bash
 
----
 
 ## 📊 Exemplos de Análises
 
@@ -22,7 +61,6 @@ g.name AS Genero,
 COUNT(t) AS QtdeMusicas
 ORDER BY QtdeMusicas DESC
 LIMIT 20;
-
 
 ### 🎧 Playlist Mais Diversa
 Calcula quais playlists possuem maior variedade de gêneros.
